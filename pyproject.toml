@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gold-paper-bot"
+version = "0.1.0"
+description = "Risk-managed XAUUSD backtesting and paper-trading example"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+mt5 = ["MetaTrader5>=5.0"]
+
+[project.scripts]
+gold-bot = "gold_bot.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
